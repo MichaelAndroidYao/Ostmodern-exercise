@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidTest</string>
+    <string name="item_title">cake title</string>
+    <string name="cake_description">cake description</string>
+    <string name="cake_content_description">cake picture</string>
+    <string name="no_internet_connection_message">No network connectivity</string>
+    <string name="network_no_connection_message">No network connection available</string>
+</resources>
