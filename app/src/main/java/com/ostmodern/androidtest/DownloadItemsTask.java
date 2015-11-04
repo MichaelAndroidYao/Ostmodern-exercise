@@ -228,6 +228,4 @@ class DownloadItemsTask extends AsyncTask<Void, Void, List<Item>> {
             dialog.dismiss();
         }
     }
-
-
 }

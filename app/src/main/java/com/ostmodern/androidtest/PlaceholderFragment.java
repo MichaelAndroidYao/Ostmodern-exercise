@@ -38,7 +38,6 @@ import java.util.List;
  * @author michaelakakpo
  * @version 18/10/15.
  */
-
 public class PlaceholderFragment extends Fragment {
 
     private final static String TAG = PlaceholderFragment.class.getSimpleName();
@@ -83,7 +82,9 @@ public class PlaceholderFragment extends Fragment {
         }
     }
 
-    // Initiating a request for the list of items
+    /**
+     * Initiates a request for the list of items
+     */
     public void beginTask() {
         mDownloadItemsTask = new DownloadItemsTask(mCurrentActivity);
         mDownloadItemsTask.execute();
@@ -101,6 +102,9 @@ public class PlaceholderFragment extends Fragment {
         setRetainInstance(true);
     }
 
+    /**
+     * @inheritDoc
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -118,6 +122,9 @@ public class PlaceholderFragment extends Fragment {
         return rootView;
     }
 
+    /**
+     * @inheritDoc
+     */
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -147,7 +154,9 @@ public class PlaceholderFragment extends Fragment {
         super.onResume();
     }
 
-    // Check if network connection is present then attempt to load items
+    /**
+     * Checks if there is network connection present and then attempt to load items if there is
+     */
     private void loadData() {
         ConnectivityManager connectivityManager = (ConnectivityManager)
                 getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);

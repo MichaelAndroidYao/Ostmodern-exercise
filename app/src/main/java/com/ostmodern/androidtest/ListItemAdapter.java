@@ -33,7 +33,7 @@ import java.util.List;
 class ListItemAdapter extends ArrayAdapter {
 
     private final Context mContext;
-
+    // Initial lit of Items
     private List<Item> listOfItems = new ArrayList<>();
 
     public ListItemAdapter(Context context, List objects) {
@@ -43,8 +43,7 @@ class ListItemAdapter extends ArrayAdapter {
     }
 
     /**
-     * Each row to be drawn will be drawn by retrieving the details of the
-     * * appropriate Item object that is that position in the list
+     * @inheritDoc
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -68,16 +67,6 @@ class ListItemAdapter extends ArrayAdapter {
         }
         itemViewHolder.getTitle().setText(currentItem.getTitle());
 
-//        Picasso.with(mContext)
-//                .load(currentItem.getImage())
-//                .resize(256, 256) // TODO - Use the default params not hardcoded fields
-//                .centerCrop()
-//                .noPlaceholder()
-//                .noFade()
-////                .error(R.drawable.ic_launcher_fab48) // TODO - find img for placeholder & for error
-//                .tag(itemViewHolder)
-//                .into(itemViewHolder.getImage());
-
         return rowItem;
     }
 
@@ -97,7 +86,11 @@ class ListItemAdapter extends ArrayAdapter {
         return listOfItems.get(position);
     }
 
-    /* Add the items from the updated items to the list and notify any observers and refresh the changes */
+    /**
+     * Add the items from the updated items to the list and notify any observers and refresh the changes
+     *
+     * @param restoredItems - The list of items the adapter is to be updated with
+     */
     public void addItemsToList(List<Item> restoredItems) {
         if (restoredItems != null) {
             listOfItems.clear();

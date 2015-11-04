@@ -72,8 +72,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Update the list of the items from the activity
-
+    /**
+     * Update the list of the items from the activity
+     *
+     * @param result - The list of items returned from the server
+     */
     public void updateItemsList(List<Item> result) {
         // Check to make sure the components are not null (set by onDetach)
         if (mPlaceholderFragment != null) {
