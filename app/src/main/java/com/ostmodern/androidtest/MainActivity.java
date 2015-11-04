@@ -56,10 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // TODO: TwoPane mode could be used to display 2 fragments.
-        // Fragment A (on the left) showing episode episode (Set) list and Fragment B on the right showing the item details
     }
-
     /**
      * @inheritDoc
      */
